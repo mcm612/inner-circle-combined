@@ -1,0 +1,123 @@
+:root {
+	--primary-color: hsl(205, 67%, 45%);
+	--primary-color-2: hsl(205, 65%, 55%);
+	--dark-color: #343a40;
+	--light-color: #f4f4f4;
+	--danger-color: #dc3545;
+	--success-color: #28a745;
+}
+.markets {
+	display: grid;
+	grid-template-columns: repeat(auto-fill, minmax(15rem, 1fr));
+	grid-gap: 3rem;
+}
+
+.market {
+	background-color: #f9f7f6;
+	display: grid;
+	grid-template-columns: repeat(2, 1fr);
+	grid-row-gap: 1.5rem;
+}
+.market__name {
+	grid-column: 1/-1;
+	grid-row: 1/2;
+	align-self: end;
+	justify-self: center;
+	text-align: center;
+	padding: .25rem;
+	width: 80%;
+	transform: translateY(25%);
+	background-color: #101d2c;
+	color: #fff;
+	z-index: 3;
+}
+.market-card__picture {
+	grid-column: 1/-1;
+	grid-row: 1/2;
+	position: relative;
+	/* -webkit-clip-path: polygon(0 0, 100% 0%, 100% 83%, 0% 98%);
+	clip-path: polygon(0 0, 100% 0%, 100% 83%, 0% 98%); */
+	height: 10rem;
+}
+
+.market-card__picture-overlay {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	background-image: linear-gradient(to right bottom, var(--primary-color-2), var(--primary-color));
+	opacity: 0.7;
+}
+.market-card__picture-img {
+	object-fit: cover;
+	height: 100%;
+	width: 100%;
+}
+
+.market__why_this_property {
+	grid-column: 1/-1;
+	grid-row: 2/3;
+	background: white;
+	padding: .75rem;
+	width: 90%;
+	margin: 0 auto;
+	border: var(--light-color) solid 5px;
+	transform: translateY(-29%);
+	margin-bottom: -2rem;
+}
+
+.market__why_this_property h4 {
+	font-size: .65rem;
+	text-transform: uppercase;
+}
+.market__why_this_property p {
+	font-size: .75rem;
+	font-style: italic;
+	margin-top: .50rem;
+}
+
+.market__max_price,
+.market__min_price,
+.market__min_cap_rate,
+.market__max_cap_rate,
+.market__min_units,
+.market__min_units {
+	font-size: .75rem;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+.market__value {
+	font-weight: bold;
+}
+.market__actions {
+	grid-column: 1/-1;
+	display: flex;
+	flex-direction: row;
+	justify-content: space-evenly;
+	align-self: end;
+}
+
+.market__actions button {
+	background-color: #c69963;
+	width: 100%;
+	color: #fff;
+	border: none;
+	border-radius: 0;
+	font-size: .75rem;
+	text-transform: uppercase;
+	padding: .25rem;
+	cursor: pointer;
+	transition: all .2s;
+}
+.market__actions button:hover {
+	background-color: #b28451;
+}
+.market__actions button {
+	border: #ffffff5e solid 1px;
+}
+
+.market__actions a {
+	color: #fff;
+	width: 100%;
+	display: inline-block;
+}
